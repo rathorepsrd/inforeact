@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
@@ -14,7 +15,10 @@ class Header extends Component {
     <nav className="nav-menu d-none d-lg-block mr-auto">
       <ul>
         <li className="active font-size"><a href="/"><i className="bx bxs-grid" /></a></li>
-        <li className="drop-down"><a href="/market">Markets</a>
+        <li className="drop-down">
+        <BrowserRouter basename="/inforeact"/>
+<Link to="/market">Markets</Link>
+          {/* <a href="/market">Markets</a> */}
           <ul>
             <li className="drop-down"><a href="#">About us</a>
               <ul>
