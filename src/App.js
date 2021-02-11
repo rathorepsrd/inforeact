@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
@@ -38,6 +38,7 @@ function App() {
   return (
     <Fragment>
       <Header />
+      <BrowserRouter basename="/">
       <Switch>
           <Route exact path="/" component={Home} />
           <Route  path="/support" component={Support} />
@@ -70,6 +71,7 @@ function App() {
           <Route exact path="/sport_widthraw" component={Sport_Widthraw} />
           <Route  path="/task_center" component={Task_Center} />
       </Switch>
+      </BrowserRouter>
       {/* <Zendesk /> */}
       <Footer />
     </Fragment>
