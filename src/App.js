@@ -38,7 +38,7 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/inforeact">
       <Switch>
           <Route exact path="/" component={Home} />
           <Route  path="/support" component={Support} />
